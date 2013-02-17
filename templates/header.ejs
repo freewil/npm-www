@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <% if (typeof description !== 'undefined') { %>
+    <meta name="description" content="<%= description %>">
+  <% } %>
   <title><%= (typeof title !== 'undefined' ? title : 'npm') %></title>
   <link rel="canonical" href="<%= canonicalHref %>">
   <link type="text/css" rel="stylesheet" media="all"
@@ -11,7 +14,7 @@
   <link type="text/css" rel="stylesheet" media="all"
     href="/static/sh.css">
   <link rel="search" type="application/opensearchdescription+xml"
-    href="/static/opensearch.xml" title="Search Packages" />
+    href="/static/opensearch.xml" title="Search Packages">
 <script>(function(){
 if (location.pathname === '/') {
 var m = location.hash.match(/^#\/[^\/]*$/)

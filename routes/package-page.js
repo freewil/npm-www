@@ -44,6 +44,7 @@ function packagePage (req, res) {
       package: p,
       profile: m.profile,
       title: m.package.name,
+      description: p.description,
       dlDay: commaIt(m.dlDay),
       dlMonth: commaIt(m.dlMonth),
       dlWeek: commaIt(m.dlWeek)
